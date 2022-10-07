@@ -1,0 +1,73 @@
+body {
+  font-family: Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+form {
+  max-width: 250px;
+  display: flex;
+  margin: 50px auto;
+  justify-content: center;
+  flex-direction: column;
+}
+
+img {
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 15px;
+}
+
+.radio {
+  margin-bottom: 16px;
+}
+
+.radio label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="radio"] {
+  display: inline;
+}
+
+button[type="submit"] {
+  background-color: #e83a14;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 50px auto;
+  width: 50%;
+}
+
+th,
+td {
+  padding: 3px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+td .edit {
+  background-color: #e83a14;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
