@@ -30,16 +30,24 @@ $("#table").on("click", "#id-edit", function () {
         $("#wholesale").prop("checked", false);
       }
 
-      //   if ($("#price_id") && $("#product_id")) {
-      //     $("#price_id").remove();
-      //     $("#product_id").remove();
-      //   }
+      if ($("#id_price") && $("#id_product")) {
+        $("#id_price").remove();
+        $("#id_product").remove();
+      }
 
       let price_id = data.price_id;
       let product_id = data.product_id;
 
-      $("#id_price").val(price_id);
-      $("#id_product").val(product_id);
+      $("#form").append(
+        `
+            <input type="hidden" name="id_price" id="id_price" value="` +
+          price_id +
+          `" />
+            <input type="hidden" name="id_product" id="id_product" value="` +
+          product_id +
+          `" />
+      `
+      );
     },
   });
 });

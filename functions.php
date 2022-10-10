@@ -49,7 +49,6 @@ function ubah($data) {
     if ($customer_group == "Retail") {
         $cg_id = 1;
     }
-    echo "Product Name = ", $product_name, ". Product ID = ", $product_id, ". Customer Group = ", $customer_group, ". CG ID = ", $cg_id, ". Price ID = ", $price_id;
     
     $query = "UPDATE price pr SET pr.cg_id = $cg_id, pr.price = $price WHERE pr.price_id = $price_id";
     mysqli_query($conn, $query);

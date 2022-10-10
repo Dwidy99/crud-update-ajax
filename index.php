@@ -43,7 +43,7 @@
 }
 
 $instance = Model::getInstance();
-$sql = "SELECT p.product_name, pr.cg_id, pr.price, pr.price_id, p.product_id FROM price pr LEFT JOIN customer_group c ON c.cg_id = pr.cg_id LEFT JOIN products p ON p.product_id = pr.product_id ORDER BY pr.price_id ASC";
+$sql = "SELECT p.product_name, pr.cg_id, pr.price, pr.price_id, p.product_id FROM price pr LEFT JOIN customer_group c ON c.cg_id = pr.cg_id LEFT JOIN products p ON p.product_id = pr.product_id ORDER BY p.product_name ASC";
 $data = $instance->getData($sql);
 ?>
 <html>
@@ -56,8 +56,6 @@ $data = $instance->getData($sql);
 
 <body>
     <form id="form" method="POST">
-        <input type="hidden" name="id_price" id="id_price" value="" />
-        <input type="hidden" name="id_product" id="id_product" value="" />
         <label for="product_name">Product Name</label>
         <input type="text" name="product_name" id="product_name" value="" />
         <div class="radio">
