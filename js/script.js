@@ -38,8 +38,8 @@ $("#table").on("click", "#id-edit", function () {
       let price_id = data.price_id;
       let product_id = data.product_id;
 
-      $("#price_id").val(price_id);
-      $("#product_id").val(product_id);
+      $("#id_price").val(price_id);
+      $("#id_product").val(product_id);
     },
   });
 });

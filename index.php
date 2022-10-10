@@ -17,10 +17,8 @@
  
  // cek apakah tombol submit sudah ditekan atau belum
  if( isset($_POST["submit"]) ) {
-     var_dump($_POST);
-     die;
      
-     if ($_POST["id_price"]) {
+     if ($_POST["id_price"] && $_POST["id_product"]) {
          if( ubah($_POST) > 0 ) {
              echo "
              Update Data Berhasil
@@ -58,8 +56,8 @@ $data = $instance->getData($sql);
 
 <body>
     <form id="form" method="POST">
-        <input type="text" name="id_price" id="price_id" value="" />
-        <input type="text" name="id_product" id="product_id" value="" />
+        <input type="hidden" name="id_price" id="id_price" value="" />
+        <input type="hidden" name="id_product" id="id_product" value="" />
         <label for="product_name">Product Name</label>
         <input type="text" name="product_name" id="product_name" value="" />
         <div class="radio">
